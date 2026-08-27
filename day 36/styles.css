@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800&family=VT323&display=swap');
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins";
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  min-height: 100%;
+}
+
+.panel {
+  display: grid;
+}
+
+.panel.name {
+  background-color: #1A292D;
+  padding: 2.5rem;
+}
+
+.panel.name nav a {
+  text-decoration: none;
+  color: #989fa1;
+  margin-right: 2rem;
+}
+
+.panel.name .text h1 {
+  color: #ffffff;
+  font-size: 6em;
+  font-weight: 400;
+  letter-spacing: .1em;
+}
+
+.panel.name .text p {
+  color: #989fa1;
+  margin-top: -3rem;
+}
+
+footer {
+  align-self: end;
+  display: flex;
+  gap: 1rem;
+}
+
+footer .brand-svg {
+  width: 20px;
+  /* height: 28px; */
+  fill: #989fa1;
+  cursor: pointer;
+}
+
+.panel img {
+  width: 100%;
+  height: 100%;
+}
+
+.panel.about {
+  grid-template-rows: 2fr 1fr;
+}
+
+.panel.about .text,
+.panel.image .text {
+  padding: 4rem 2.5rem;
+}
+
+.panel.about .text p,
+.panel.image .text p {
+  color: #3c4649;
+}
+
+.panel.about .text button,
+.panel.image .text button {
+  font-size: 1rem;
+  color: #262f31;
+  background: #ffffff;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  border-bottom: 1px solid #e9edee;
+  padding: .3rem;
+}
+
+.panel.image {
+  grid-template-rows: 1fr 2fr;
+}
+
+/*Responsiveness*/
+@media (max-width: 1050px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .panel.image {
+    grid-template-columns: 1fr 1fr;
+    grid-column: span 2;
+    grid-template-rows: 1fr;
+  }
+
+  .panel.image .text {
+    align-self: center;
+  }
+}
+
+@media (max-width: 750px) {
+  main {
+    grid-template-columns: 100%;
+    grid-template-rows: 500px 500px 400px;
+  }
+
+  .panel.about {
+    grid-row: 2;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 570px) {
+  main {
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+  }
+
+  .panel.about {
+    grid-row: 2;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .panel.image {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}
+
+@media (max-width: 398px) {
+  .panel.name nav a {
+    font-size: .7rem;
+  }
+
+  .panel.name .text h1 {
+  font-size: 4em;
+  font-weight: 400;
+  letter-spacing: .1em;
+}
+}

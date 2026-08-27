@@ -1,0 +1,131 @@
+
+
+.hero {
+    background: url(assets/hero\ background.jpeg);
+    width: 100%;
+    margin: auto;
+}
+
+.hero-top {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    padding: 6rem;
+}
+
+.hero-txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-fast-btn {
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 1.5rem;
+    padding: .5rem;
+    height: 1rem;
+    width: 8rem;
+    margin-bottom: -20px;
+}
+
+.hero-fast-btn img {
+    width: 15px;
+    height: 15px;
+}
+.hero-fast-btn p {
+    color: #014839;
+    font-size: .7rem;
+    font-weight: 1000;
+}
+
+.hero-txt h1 {
+    font-size: 4rem;
+    color: #083322;
+}
+.hero-txt > p {
+    font-size: 1.3rem;
+    color: #313131;
+    margin-top: -8px;
+}
+
+.hero-btns {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.hero-btn {
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+}
+.green-btn {
+    background-color: #004939;
+    color: #b6d11f;
+}
+.white-btn {
+    background-color: #fff;
+    color: #004939;
+}
+
+.partner-icons {
+    width: 150px;
+}
+.hero-pic-one img {
+    width: 230px;
+}
+
+.hero-pic-one, .hero-pic-two, .hero-pic-three, .hero-pic-four {
+    position: absolute;
+}
+.hero-pic-one {
+    left: 1rem;
+    top: 0rem;
+}
+.hero-pic-two {
+    right: 4rem;
+    top: 0rem;
+}
+.hero-pic-three {
+    bottom: 0rem;
+    left: 14rem;
+}
+.hero-pic-four {
+    bottom: 0rem;
+    right: 7rem;
+}
+
+
+/*The lower section of hero that has the parners icon*/
+.hero-icons {
+    width: 80%;
+    margin: 1rem auto;
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+}
+.partner-txt p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #313131;
+}
+
+.partner-icons {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+}
+.partner-icons img {
+    width: 150px;
+    height: 55px;
+}

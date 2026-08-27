@@ -1,0 +1,114 @@
+/* Order: name | duration | timing-function | delay | iteration-count | direction | fill-mode | play-state */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    /* background: #000; */
+    font-family: system-ui, sans-serif;
+
+}
+
+.sky {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    /* Name | Duration | Timing | Iteration */
+    animation: skyCycle 12s linear infinite;
+    background: url(assets/cloud-image.PNG);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.orbit-axis {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    height: 2px;
+    animation: sunOrbit 12s linear infinite;
+}
+
+.sun {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 300px;
+    left: -40px;
+    animation: sunColor 12s linear infinite;
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.4);
+}
+
+.horizon {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 15vh;
+    background: #191c1a;
+    border-top: 4px solid #111412;
+    animation: horizonLighting 12s linear infinite;
+    z-index: 10;
+}
+
+/* @keyframes skyCycle {
+    0%, 100% {
+        background: #0b1528;
+    }
+    20% {
+        background: #e25f38;
+    }
+    35%, 65% {
+        background: #7cd0ff;
+    }
+    80% {
+        background: #b83b5e;
+    }
+} */
+
+@keyframes sunOrbit {
+    0% {
+        transform: rotate(-90deg);
+    }
+    50% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(270deg);
+    }
+}
+
+@keyframes sunColor {
+    0%, 100% {
+        background: #ff4500;
+        filter: blur(2px);
+    }
+    20% {
+        background: #ffa500;
+    }
+    35%, 65% {
+        background: #fffde7;
+    }
+    80% {
+        background: #ff5722;
+    }
+}
+
+@keyframes horizonLighting {
+    0%, 100% {
+        background: #0d110f;
+    }
+    20% {
+        background: #442a22;
+    }
+    35%, 65% {
+        background: #2e3d34;
+    }
+    80% {
+        background: #3a1c28;
+    }
+}
